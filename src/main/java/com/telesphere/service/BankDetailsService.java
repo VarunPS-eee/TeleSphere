@@ -29,6 +29,10 @@ public class BankDetailsService {
         return bankDetailsRepository.findById(id);
     }
 
+    public Optional<BankDetails> getBankDetailsByCardNumber(String cardNumber) {
+        return bankDetailsRepository.findByCardNumber(cardNumber);
+    }
+
     // Update bank details by ID
     public Optional<BankDetails> updateBankDetails(Long id, BankDetails bankDetailsDetails) {
         return bankDetailsRepository.findById(id).map(bankDetails -> {
