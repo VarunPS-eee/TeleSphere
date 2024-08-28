@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #222;
+            color: #fff;
+            font-family: sans-serif;
+        }
+
+        .header {
+            width: 100%;
+            background-color: #1c1c1c;
+            padding: 10px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .header button {
+            background-color: #ffffff;
+            color: #000000;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .header button:hover {
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin-top: 50px; /* Space for the fixed header */
+        }
+
+        .carousel {
+            width: 80%;
+            max-width: 800px;
+            height: 300px;
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            position: relative;
+            display: flex;
+        }
+
+        .carousel-item {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            transition: opacity 1s ease-in-out;
+            opacity: 0;
+        }
+
+        .carousel-item.active {
+            opacity: 1;
+        }
+
+        .services {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .service {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .service img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <button onclick="window.location.href='home.html'">Home</button>
+        <button onclick="window.location.href='about-us.html'">About Us</button>
+    </header>
+
+    <div class="container">
+        <div class="carousel">
+            <div class="carousel-item" style="background-image: url('https://cdn.pixabay.com/photo/2018/01/03/01/17/film-3057394_640.jpg');"></div>
+            <div class="carousel-item active" style="background-image: url('https://cdn.pixabay.com/photo/2023/10/06/23/29/ai-generated-8299238_1280.jpg');"></div>
+            <div class="carousel-item" style="background-image: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg');"></div>
+            <div class="carousel-item" style="background-image: url('https://cdn.pixabay.com/photo/2016/10/30/05/45/learning-1782430_640.jpg');"></div>
+        </div>
+
+        <div class="services">
+            <div class="service" onclick="window.location.href='plans.html'">
+                <img src="C:\Users\manik\OneDrive\Desktop\Telesphere1\Dependencies\mobile.png" alt="Service 1">
+            </div>
+            <div class="service" onclick="window.location.href='plans.html'">
+                <img src="C:\Users\manik\OneDrive\Desktop\Telesphere1\Dependencies\wifi-sign.png" alt="Service 2">
+            </div>
+            <div class="service" onclick="window.location.href='plans.html'">
+                <img src="C:\Users\manik\OneDrive\Desktop\Telesphere1\Dependencies\online-video.png" alt="Service 3">
+            </div>
+            <div class="service" onclick="window.location.href='plans.html'">
+                <img src="C:\Users\manik\OneDrive\Desktop\Telesphere1\Dependencies\gift.png" alt="Service 4">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const carouselItems = document.querySelectorAll('.carousel-item');
+        let currentIndex = 0;
+
+        function nextSlide() {
+            carouselItems[currentIndex].classList.remove('active');
+
+            currentIndex = (currentIndex + 1) % carouselItems.length;
+
+            carouselItems[currentIndex].classList.add('active');
+        }
+
+        setInterval(nextSlide, 3000); // Change slide every 3 seconds
+    </script>
+</body>
+</html>

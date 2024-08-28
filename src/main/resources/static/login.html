@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body {
+            background-color: #000000; /* Black background */
+            color: white; /* White text */
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #1c1c1c; /* Light black shade for the container */
+            padding: 30px;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Optional: adds shadow for a 3D effect */
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #555; /* Darker border color */
+            border-radius: 3px;
+            box-sizing: border-box;
+            background-color: #333; /* Dark background for input fields */
+            color: white; /* White text inside input fields */
+        }
+
+        button {
+            background-color: #4CAF50; /* Green button */
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Welcome To Login Form</h1>
+    <form id="loginForm">
+        <input type="text" id="username" placeholder="Enter user name here" required>
+        <input type="password" id="password" placeholder="Enter password here" required>
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        // Get the username and password values
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        // Make an AJAX request to the backend to validate the username and password
+        fetch(`http://localhost:8080/api/users/${username}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('User not found');
+                }
+                return response.json();
+            })
+            .then(user => {
+                if (user.password === password) {
+                    // Redirect to services.html if validation is successful
+                    window.location.href = 'services.html';
+                } else {
+                    // Display an alert for failed validation
+                    alert('Invalid username or password');
+                }
+            })
+            .catch(error => {
+                alert(error.message);
+            });
+    });
+</script>
+</body>
+</html>
