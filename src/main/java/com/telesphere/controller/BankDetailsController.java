@@ -6,7 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @RestController
@@ -15,6 +17,26 @@ public class BankDetailsController {
 
     @Autowired
     private BankDetailsService bankDetailsService;
+
+    @GetMapping("/validate")
+    public ResponseEntity<Map<String, Boolean>> validateBankDetails(
+            @RequestParam String cardNumber,
+            @RequestParam String cvv,
+            @RequestParam String pin
+    ) {
+        Optional<BankDetails> bankDetails = bankDetailsService.getBankDetailsByCardNumber(cardNumber);
+
+        if (bankDetails.isPresent()) {
+            BankDetails details = bankDetails.get();
+            boolean isValid = details.getCvv() == Integer.parseInt(cvv) && details.getPin() == Integer.parseInt(pin);
+            Map<String, Boolean> response = new HashMap<>();
+            response.put("isValid", isValid);
+
+            return ResponseEntity.ok(response);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
 
     // Create new bank details
     @PostMapping

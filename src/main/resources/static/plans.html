@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plans</title>
+    <style>
+        body {
+            background-color: #000000;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: auto;
+        }
+
+        .header {
+            width: 100%;
+            background-color: #1c1c1c;
+            padding: 10px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .back-button {
+            background-color: #ffffff;
+            color: #000000;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 20px; /* Spacing from the right edge */
+        }
+
+        .back-button:hover {
+            background-color: #f0f0f0; /* Lighter background on hover */
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px; /* Space between cards */
+            margin-top: 60px; /* Space for the fixed header */
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #000000;
+        }
+
+        .info {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .buy-button {
+            background-color: #000000;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .buy-button:hover {
+            background-color: #333333; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <button class="back-button" onclick="window.location.href='services.html'">Back</button>
+    </header>
+
+    <div class="card-container">
+        <div class="card">
+            <div class="price">$65</div>
+            <div class="info">
+                Unlimited calls<br>
+                2.0GB per day
+            </div>
+            <div class="info">
+                Validity<br>
+                365 Days
+            </div>
+            <button class="buy-button" onclick="redirectToPayment()">BUY</button>
+        </div>
+        <div class="card">
+            <div class="price">$35</div>
+            <div class="info">
+                Unlimited calls<br>
+                2.0GB per day
+            </div>
+            <div class="info">
+                Validity<br>
+                6 Months
+            </div>
+            <button class="buy-button" onclick="redirectToPayment()">BUY</button>
+        </div>
+        <div class="card">
+            <div class="price">$20</div>
+            <div class="info">
+                Unlimited calls<br>
+                2.0GB per day
+            </div>
+            <div class="info">
+                Validity<br>
+                3 Months
+            </div>
+            <button class="buy-button" onclick="redirectToPayment()">BUY</button>
+        </div>
+        <div class="card">
+            <div class="price">$8.5</div>
+            <div class="info">
+                Unlimited calls<br>
+                2.0GB per day
+            </div>
+            <div class="info">
+                Validity<br>
+                28 Days
+            </div>
+            <button class="buy-button" onclick="redirectToPayment()">BUY</button>
+        </div>
+    </div>
+
+    <script>
+        function redirectToPayment() {
+            window.location.href = 'payment.html';
+        }
+    </script>
+</body>
+</html>

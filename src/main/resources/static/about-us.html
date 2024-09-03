@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Telesphere</title>
+    <style>
+        body {
+            background-color: #222;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensures the body covers the full viewport height */
+        }
+
+        .nav {
+            background-color: #111;
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            z-index: 1000; /* Ensures nav bar stays on top */
+        }
+
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            margin-top: 60px; /* Space for fixed nav bar */
+            padding: 20px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            flex: 1; /* Allows the container to grow and fill available space */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for better readability */
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Optional: adds a shadow for a 3D effect */
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: auto;
+            max-width: 100%; /* Ensures responsiveness */
+            border-radius: 10px; /* Rounded corners for the image */
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 20px 0;
+            max-width: 800px; /* Limits the width of paragraphs for better readability */
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            text-align: left;
+            margin: 20px auto;
+            max-width: 800px; /* Limits the width of the list for better readability */
+        }
+
+        li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="home.html">Home</a>
+        <a href="about-us.html">About Us</a>
+        <a href="login.html">Login</a>
+    </nav>
+    
+    <div class="container">
+        <img src="C:\Users\manik\Downloads\2482029.jpg" alt="About Us" class="image-placeholder">
+        <h1>Telesphere</h1>
+        <h2>The future of global connectivity</h2>
+        <p>Welcome to Telesphere! We are dedicated to providing top-notch telecom services that keep you connected to the world. Our cutting-edge offerings include:</p>
+        <ul>
+            <li>High-speed 5G connectivity</li>
+            <li>Reliable Wi-Fi services</li>
+            <li>Streaming services (OTT) for endless entertainment</li>
+            <li>Exclusive rewards and benefits</li>
+        </ul>
+        <p>At Telesphere, we are committed to delivering the highest quality of service to ensure you stay connected and entertained, no matter where you are.</p>
+    </div>
+</body>
+</html>

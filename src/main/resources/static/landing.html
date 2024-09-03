@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Telesphere</title>
+  <style>
+    /* Basic reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #fff;
+      background-color: #000; /* Set background color to black */
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent black */
+      padding: 10px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      text-align: center;
+      margin-top: 100px; /* Adjusted to provide space for the fixed header */
+      padding: 20px;
+      background-color: #1c1c1c; /* Light black (dark gray) for the box parts */
+      border-radius: 8px;
+      max-width: 800px;
+      width: 100%;
+    }
+
+    main h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    main p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      background-color: #fff;
+      color: #111;
+      padding: 15px 30px;
+      text-decoration: none;
+      font-size: 20px;
+      border-radius: 5px;
+      display: inline-block;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .button:hover {
+      background-color: #ddd;
+    }
+
+    .button:active {
+      background-color: #bbb;
+      transform: scale(0.98);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>THE FUTURE OF GLOBAL CONNECTIVITY</h1>
+    <p>Telesphere is an innovative telecommunication service application designed to streamline and enhance communication experiences for individuals and businesses. This application aims to provide a comprehensive suite of communication tools and features to ensure seamless connectivity and efficient management of communication needs..</p>
+    <a href="home.html" class="button">Get Started</a>
+  </main>
+</body>
+</html>
