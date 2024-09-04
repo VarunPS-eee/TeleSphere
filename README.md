@@ -128,10 +128,10 @@ Use tools like Postman or cURL to test the API endpoints. Ensure that the applic
   - ![Get Customer By ID](images/customer/getCustomerById.jpeg)
 
 - **Plan Management UI**
-  - ![Create Plan](images/plan/createPlan.jpeg)
-  - ![Delete Plan By ID](images/plan/deletePlanById.jpeg)
-  - ![Get All Plans](images/plan/getAllPlans.jpeg)
-  - ![Get Plan By ID](images/plan/getPlanById.jpeg)
+  - ![Add Bank Details](images/plan/createPlan.jpeg)
+  - ![Delete Bank By ID](images/plan/deletePlanById.jpeg)
+  - ![Get All Bank Details](images/plan/getAllPlans.jpeg)
+  - ![Get Bank By ID](images/plan/getPlanById.jpeg)
 
 ## Directory Structure
 ```
